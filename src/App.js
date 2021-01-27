@@ -1,21 +1,14 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React from "react";
+import { Provider } from "react-redux";
+import Lista from "./component/Lista";
+import store from "./store";
+
+const App = () => (
+  <Provider store={store}>
+    <main>
+      <Lista />
+    </main>
+  </Provider>
+);
 
 export default App;
